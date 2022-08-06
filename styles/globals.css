@@ -21,6 +21,8 @@ body {
   margin: 0;
   padding: 0;
   font: inherit;
+  text-decoration: inherit;
+  color: inherit;
 }
 
 *,
@@ -29,16 +31,12 @@ body {
   box-sizing: border-box;
 }
 
-ul[role='list'],
-ol[role='list'] {
+ul,
+ol {
   list-style: none;
 }
 
-a:not([class]) {
-  text-decoration-skip-ink: auto;
-}
-
-img,
+Image,
 picture {
   max-width: 100%;
   display: block;

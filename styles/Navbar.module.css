@@ -1,4 +1,25 @@
-.header {
-  font-weight: normal;
-  font-size: large;
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
+.logoWrapper {
+  width: 200px;
+}
+
+.linkContainer {
+  display: flex;
+  flex-direction: row;
+}
+
+.linkWrapper {
+  margin: auto;
+  padding: 5px 10px;
+  font-size: larger;
+}
+
+.selected {
+  background-image: url('../assets/navbar_background.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
 }
