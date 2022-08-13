@@ -14,16 +14,20 @@ function LinkWrapper(props: LinkWrapperProps) {
   const { path, text, currentPath } = props;
   return (
     <li className={`${styles.linkWrapper} ${currentPath === path ? styles.selected : null}`}>
-      <Link className={styles.link} href={path}>{text}</Link>
+      <Link className={styles.link} href={path}>
+        <a>
+          <h1>{text}</h1>
+        </a>
+      </Link>
     </li>
   );
 }
 
-export default function Navbar() {
+export default function () {
   const router = useRouter();
   return (
     <div className={styles.container}>
-      <Link href="/">
+      <Link href="/aktuelles">
         <a>
           <div className={styles.logoWrapper}>
             <Image src={logo} layout="responsive" />
@@ -31,8 +35,11 @@ export default function Navbar() {
         </a>
       </Link>
       <ul className={styles.linkContainer}>
-        <LinkWrapper path="/" text="Aktuelles" currentPath={router.pathname} />
-        <LinkWrapper path="/help" text="Helfen" currentPath={router.pathname} />
+        <LinkWrapper path="/aktuelles" text="Aktuelles" currentPath={router.pathname} />
+        <LinkWrapper path="/wuensche" text="Wünsche" currentPath={router.pathname} />
+        <LinkWrapper path="/helfen" text="Helfen" currentPath={router.pathname} />
+        <LinkWrapper path="/wir" text="Wir" currentPath={router.pathname} />
+        <LinkWrapper path="/faq" text="FAQ" currentPath={router.pathname} />
       </ul>
     </div>
   );

@@ -1,7 +1,11 @@
 import styles from '../styles/Footer.module.css';
+import SponsorList from './SponsorList';
 
-export default function Footer() {
+export default function () {
   return (
-    <h1 className={styles.header}>Footer</h1>
+    <div className={styles.container}>
+      <SponsorList />
+      Hello
+    </div>
   );
 }

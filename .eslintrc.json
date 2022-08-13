@@ -25,6 +25,7 @@
         "react/jsx-filename-extension": 0,
         "react/react-in-jsx-scope": 0,
         "import/extensions": 0,
-        "jsx-a11y/anchor-is-valid": 0
+        "jsx-a11y/anchor-is-valid": 0,
+        "func-names": 0
     }
 }

@@ -1,4 +1,4 @@
-.header {
-  font-weight:lighter;
-  font-size: small;
+.container {
+  display: flex;
+  flex-direction: column;
 }
