@@ -6,7 +6,6 @@
 # trap cleanup EXIT
 
 last_commit_id=x
-npm run start &
 
 while true
 do
@@ -18,8 +17,9 @@ do
   if [ $last_commit_id != $temp_commit_id ]
   then
     last_commit_id=$temp_commit_id
+    jobs -p | xargs kill
     npm install
-    npm run build
+    npm run build && npm run start &
   fi
 
   sleep 1
