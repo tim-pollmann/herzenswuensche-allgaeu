@@ -2,6 +2,6 @@
 
 export default function () {
   return (
-    <h1>FAQa</h1>
+    <h1>FAQa2</h1>
   );
 }
