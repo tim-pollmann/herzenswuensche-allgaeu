@@ -1,11 +1,12 @@
-function cleanup {
-  echo "stopping server"
-  jobs -p | xargs kill
-}
+# function cleanup {
+#   echo "stopping server"
+#   jobs -p | xargs kill
+# }
 
-trap cleanup EXIT
+# trap cleanup EXIT
 
 last_commit_id=x
+npm run start &
 
 while true
 do
@@ -18,7 +19,7 @@ do
   then
     last_commit_id=$temp_commit_id
     npm install
-    npm run build && npm run start &
+    npm run build
   fi
 
   sleep 1
