@@ -1,18 +1,25 @@
-function get_last_commit_id {
-  local last_commit_id=$(git log -1 | grep 'commit' | cut -c 8-)
-  echo $last_commit_id
+function cleanup {
+  echo "stopping server"
+  jobs -p | xargs kill
 }
+
+trap cleanup EXIT
+
+last_commit_id=x
 
 while true
 do
-  git fetch && git pull
+  git fetch
+  git pull
 
-  if [ last_commit_id != $(get_last_commit_id) ]
+  temp_commit_id=$(git log -1 | grep 'commit' | cut -c 8-)
+
+  if [ $last_commit_id != $temp_commit_id ]
   then
-    last_commit_id=$(get_last_commit_id)
+    last_commit_id=$temp_commit_id
     npm install
-    npm run build && npm run start -p 3004
+    npm run build && npm run start &
   fi
 
-  sleep 15
+  sleep 1
 done
