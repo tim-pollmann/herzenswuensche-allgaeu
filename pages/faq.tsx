@@ -1,7 +1,7 @@
 // import styles from '../styles/Content.module.css';
 
-export default function () {
+export default function faq() {
   return (
-    <h1>FAQa232</h1>
+    <h1>FAQ</h1>
   );
 }

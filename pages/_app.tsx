@@ -3,9 +3,9 @@ import Head from 'next/head';
 import type { AppProps } from 'next/app';
 import '../styles/globals.css';
 import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
+// import Footer from '../components/Footer';
 
-export default function ({ Component, pageProps }: AppProps) {
+export default function app({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
@@ -15,7 +15,7 @@ export default function ({ Component, pageProps }: AppProps) {
       </Head>
       <Navbar />
       <Component {...pageProps} />
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }

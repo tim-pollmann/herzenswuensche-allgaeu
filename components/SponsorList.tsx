@@ -32,7 +32,7 @@ function SponsorWrapper(props: SponsorWrapperProps) {
   );
 }
 
-export default function () {
+export default function SponsorList() {
   return (
     <div className={styles.container}>
       <h1>Unsere Sponsoren</h1>

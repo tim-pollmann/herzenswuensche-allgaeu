@@ -23,7 +23,7 @@ function LinkWrapper(props: LinkWrapperProps) {
   );
 }
 
-export default function () {
+export default function Navbar() {
   const router = useRouter();
   return (
     <div className={styles.container}>
