@@ -1,12 +1,40 @@
 // import styles from '../styles/Content.module.css';
+import WithId from 'mongodb';
+import connectToDb from '../libs/mongodb';
 
-export default function () {
+interface Props {
+  posts: WithId.WithId<WithId.Document>[]
+}
+
+export async function getStaticProps() {
+  const { db } = await connectToDb();
+
+  const posts = await db
+    .collection('aktuelles')
+    .find({})
+    .limit(10)
+    .toArray();
+
+  return {
+    props: {
+      posts: JSON.parse(JSON.stringify(posts)),
+      revalidate: 10,
+    },
+  };
+}
+
+export default function aktuelles(props: Props) {
+  const { posts } = props;
+
   return (
     <>
       <h1>Aktuelles</h1>
-      <p>
-        Hellooooo
-      </p>
+      <ol>
+        {posts.map((post) => (
+          <li key={post.id}>{post.title}</li>
+        ))}
+      </ol>
+
     </>
   );
 }
