@@ -30,9 +30,22 @@ export default function aktuelles(props: Props) {
     <>
       <h1>Aktuelles</h1>
       <ol>
-        {posts.map((post) => (
-          <li key={post.id}>{post.title}</li>
-        ))}
+        {posts.map((post) => {
+          const date = new Date(post.date);
+          return (
+            <li key={post._id.toString()}>
+              <p>
+                {date.getDate()}
+                .
+                {date.getMonth()}
+                .
+                {date.getFullYear()}
+              </p>
+              <h3>{post.title}</h3>
+              <p>{post.content}</p>
+            </li>
+          );
+        })}
       </ol>
 
     </>
