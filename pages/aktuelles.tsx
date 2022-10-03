@@ -21,7 +21,7 @@ export async function getStaticProps() {
   };
 }
 
-export default function aktuelles(props: Props) {
+export default function Aktuelles(props: Props) {
   const { posts } = props;
 
   return (

@@ -1,6 +1,6 @@
 // import styles from '../styles/Content.module.css';
 
-export default function helfen() {
+export default function Helfen() {
   return (
     <h1>Helfen</h1>
   );

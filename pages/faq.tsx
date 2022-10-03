@@ -1,6 +1,6 @@
 // import styles from '../styles/Content.module.css';
 
-export default function faq() {
+export default function FAQ() {
   return (
     <h1>FAQ</h1>
   );
