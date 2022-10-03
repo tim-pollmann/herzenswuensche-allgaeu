@@ -12,7 +12,6 @@ export async function getStaticProps() {
   const posts = await db
     .collection('aktuelles')
     .find({})
-    .limit(10)
     .toArray();
 
   return {
