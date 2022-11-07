@@ -1,5 +1,5 @@
-// import styles from '../styles/Content.module.css';
 import React, { useState } from 'react';
+import styles from '../styles/Content.module.css';
 
 export default function Verwaltung() {
   const [regenerating, setRegenerating] = useState(false);
@@ -12,11 +12,13 @@ export default function Verwaltung() {
   };
 
   return (
-    <>
-      <h1>Verwaltung</h1>
-      {regenerating
+    <div className={styles.container}>
+      <div className={styles.contentContainer}>
+        <h1>Verwaltung</h1>
+        {regenerating
       && <p>regenerating...</p>}
-      <button type="submit" onClick={addSth}>Add Post</button>
-    </>
+        <button type="submit" onClick={addSth}>Add Post</button>
+      </div>
+    </div>
   );
 }

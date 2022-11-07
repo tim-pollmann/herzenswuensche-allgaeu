@@ -1,10 +1,12 @@
 import styles from '../styles/Footer.module.css';
-import SponsorList from './SponsorList';
 
 export default function Footer() {
   return (
     <div className={styles.container}>
-      <SponsorList />
+      <div className={styles.contentContainer}>
+        <h1>Footer</h1>
+        <p>ksjhlkjahsölsjhdkölj jkasHKH jlskh lskjfkljsklöjö skujhjkj siks skksjhlkjahsölsjhdkölj jkasHKH jlskh lskjfkljsklöjö skujhjkj siks skksjhlkjahsölsjhdkölj jkasHKH jlskh lskjfkljsklöjö skujhjkj siks skksjhlkjahsölsjhdkölj jkasHKH jlskh lskjfkljsklöjö skujhjkj siks skksjhlkjahsölsjhdkölj jkasHKH jlskh lskjfkljsklöjö skujhjkj siks skksjhlkjahsölsjhdkölj jkasHKH jlskh lskjfkljsklöjö skujhjkj siks skksjhlkjahsölsjhdkölj jkasHKH jlskh lskjfkljsklöjö skujhjkj siks skksjhlkjahsölsjhdkölj jkasHKH jlskh lskjfkljsklöjö skujhjkj siks skksjhlkjahsölsjhdkölj jkasHKH jlskh lskjfkljsklöjö skujhjkj siks skksjhlkjahsölsjhdkölj jkasHKH jlskh lskjfkljsklöjö skujhjkj siks skksjhlkjahsölsjhdkölj jkasHKH jlskh lskjfkljsklöjö skujhjkj siks skksjhlkjahsölsjhdkölj jkasHKH jlskh lskjfkljsklöjö skujhjkj siks skksjhlkjahsölsjhdkölj jkasHKH jlskh lskjfkljsklöjö skujhjkj siks skksjhlkjahsölsjhdkölj jkasHKH jlskh lskjfkljsklöjö skujhjkj siks sk</p>
+      </div>
     </div>
   );
 }

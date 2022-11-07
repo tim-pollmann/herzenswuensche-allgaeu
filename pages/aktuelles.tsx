@@ -25,26 +25,28 @@ export default function Aktuelles(props: Props) {
   const { posts } = props;
 
   return (
-    <div className={styles.content}>
-      <h1>Aktuelles</h1>
-      <ol>
-        {posts.map((post) => {
-          const date = new Date(post.date);
-          return (
-            <li key={post._id.toString()}>
-              <p>
-                {date.getDate()}
-                .
-                {date.getMonth()}
-                .
-                {date.getFullYear()}
-              </p>
-              <h3>{post.title}</h3>
-              <p>{post.content}</p>
-            </li>
-          );
-        })}
-      </ol>
+    <div className={styles.container}>
+      <div className={styles.contentContainer}>
+        <h1>Aktuelles</h1>
+        <ol>
+          {posts.map((post) => {
+            const date = new Date(post.date);
+            return (
+              <li key={post._id.toString()}>
+                <p>
+                  {date.getDate()}
+                  .
+                  {date.getMonth()}
+                  .
+                  {date.getFullYear()}
+                </p>
+                <h3>{post.title}</h3>
+                <p>{post.content}</p>
+              </li>
+            );
+          })}
+        </ol>
+      </div>
     </div>
   );
 }
