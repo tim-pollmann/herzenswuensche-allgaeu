@@ -34,6 +34,7 @@ export default function Navbar() {
           </div>
         </a>
       </Link>
+      <div className={styles.placeholder} />
       <ul className={styles.linkContainer}>
         <LinkWrapper path="/aktuelles" text="Aktuelles" currentPath={router.pathname} />
         <LinkWrapper path="/wuensche" text="Wünsche" currentPath={router.pathname} />

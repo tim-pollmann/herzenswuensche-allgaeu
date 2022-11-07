@@ -1,5 +1,5 @@
-// import styles from '../styles/Content.module.css';
 import WithId from 'mongodb';
+import styles from '../styles/Content.module.css';
 import connectToDb from '../libs/mongodb';
 
 interface Props {
@@ -25,7 +25,7 @@ export default function Aktuelles(props: Props) {
   const { posts } = props;
 
   return (
-    <>
+    <div className={styles.content}>
       <h1>Aktuelles</h1>
       <ol>
         {posts.map((post) => {
@@ -45,7 +45,6 @@ export default function Aktuelles(props: Props) {
           );
         })}
       </ol>
-
-    </>
+    </div>
   );
 }
