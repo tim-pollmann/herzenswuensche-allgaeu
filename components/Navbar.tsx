@@ -24,8 +24,8 @@ function LinkWrapper(props: LinkWrapperProps) {
 export default function Navbar() {
   const router = useRouter();
   return (
-    <div className={styles.container}>
-      <div className={styles.contentContainer}>
+    <header className={styles.container}>
+      <nav className={styles.contentContainer}>
         <Link href="/aktuelles">
           <div className={styles.logoWrapper}>
             <Image alt="logo" src={logo} layout="responsive" />
@@ -39,7 +39,7 @@ export default function Navbar() {
           <LinkWrapper path="/wir" text="Wir" currentPath={router.pathname} />
           <LinkWrapper path="/faq" text="FAQ" currentPath={router.pathname} />
         </ul>
-      </div>
-    </div>
+      </nav>
+    </header>
   );
 }
