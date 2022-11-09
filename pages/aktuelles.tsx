@@ -1,3 +1,4 @@
+import React from 'react';
 import WithId from 'mongodb';
 import styles from '../styles/Content.module.css';
 import connectToDb from '../libs/mongodb';
