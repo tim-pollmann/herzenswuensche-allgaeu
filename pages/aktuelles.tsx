@@ -25,13 +25,13 @@ export default function Aktuelles(props: Props) {
   const { posts } = props;
 
   return (
-    <div className={styles.content}>
-      <h1>Aktuelles</h1>
-      <ol>
+    <main className={styles.container}>
+      <div className={styles.contentContainer}>
+        <h1>Aktuelles</h1>
         {posts.map((post) => {
           const date = new Date(post.date);
           return (
-            <li key={post._id.toString()}>
+            <article key={post._id.toString()}>
               <p>
                 {date.getDate()}
                 .
@@ -41,10 +41,10 @@ export default function Aktuelles(props: Props) {
               </p>
               <h3>{post.title}</h3>
               <p>{post.content}</p>
-            </li>
+            </article>
           );
         })}
-      </ol>
-    </div>
+      </div>
+    </main>
   );
 }

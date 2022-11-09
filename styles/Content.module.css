@@ -1,4 +1,15 @@
-.content {
-    /* background-color: aqua; */
+.container {
+    width: 100%;
+}
+  
+.contentContainer {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    max-width: 50rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
     text-align: justify;
 }
