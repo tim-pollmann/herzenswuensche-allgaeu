@@ -1,19 +1,29 @@
 import React from 'react';
-import WithId from 'mongodb';
+import WithId, { ObjectId } from 'mongodb';
 import styles from '../styles/Content.module.css';
-import connectToDb from '../libs/mongodb';
+// import connectToDb from '../libs/mongodb';
 
 interface Props {
   posts: WithId.WithId<WithId.Document>[]
 }
 
 export async function getStaticProps() {
-  const { db } = await connectToDb();
+  // const { db } = await connectToDb();
 
-  const posts = await db
-    .collection('aktuelles')
-    .find({})
-    .toArray();
+  // const posts = await db
+  //   .collection('aktuelles')
+  //   .find({})
+  //   .toArray();
+
+  const posts = [
+    {
+      _id: new ObjectId('633b13828462f9549a7062e6'),
+      content: "Lorem Ipsum has been the industry's standard dummy text ever since the",
+      date: '2022-10-03T16:53:22.205Z',
+      public: true,
+      title: 'Test 2',
+    },
+  ];
 
   return {
     props: {
