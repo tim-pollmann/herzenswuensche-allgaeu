@@ -1,5 +1,6 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import Head from 'next/head';
+import React from 'react';
 import type { AppProps } from 'next/app';
 import '../styles/globals.css';
 import Navbar from '../components/Navbar';
