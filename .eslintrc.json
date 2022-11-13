@@ -4,27 +4,16 @@
         "es2021": true,
         "node": true
     },
-    "extends": [
-        "next/core-web-vitals",
-        "plugin:react/recommended",
-        "airbnb"
+    "extends": "standard-with-typescript",
+    "overrides": [
     ],
-    "parser": "@typescript-eslint/parser",
     "parserOptions": {
-        "ecmaFeatures": {
-            "jsx": true
-        },
         "ecmaVersion": "latest",
-        "sourceType": "module"
+        "sourceType": "module",
+        "project": ["tsconfig.json"]
     },
-    "plugins": [
-        "react",
-        "@typescript-eslint"
-    ],
     "rules": {
-        "react/jsx-filename-extension": 0,
-        "import/extensions": 0,
-        "no-underscore-dangle": 0,
-        "max-len": 0
+        "@typescript-eslint/semi": ["error", "always"],
+        "@typescript-eslint/quotes": ["error", "single"]
     }
 }
